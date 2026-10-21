@@ -1,0 +1,13 @@
+{
+  "name": "Game Jam",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "hostRequirements": { "cpus": 2 },
+  "postAttachCommand": "npx --yes http-server -p 8080 -c-1",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": { "label": "Game preview", "onAutoForward": "openPreview" }
+  },
+  "customizations": {
+    "vscode": { "extensions": ["esbenp.prettier-vscode"] }
+  }
+}
